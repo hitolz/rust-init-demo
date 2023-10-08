@@ -1,0 +1,41 @@
+[package]
+name = "rust-init-demo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-std = "1.12.0"
+tokio = { version = "1.18.0", features = ["rt", "time", "full"] }
+serde_json = "1.0"
+thiserror = "1.0"
+serde = "1.0"
+serde_derive = "1.0"
+actix-web = "4"
+config = "0.13.1"
+sqlx = { version = "0.6", features = [
+    "runtime-async-std-native-tls",
+    "mysql",
+    "chrono",
+    "decimal"
+] }
+chrono = {version="0.4.23",features = ["serde"]} # 时间库
+lazy_static = "1.4"
+nanoid = "0.4.0"
+toml = "0.7.2"
+log = "0.4"
+env_logger = "0.10.0"
+reqwest = "0.11.4"
+once_cell = "1.8.0"
+time = "0.3"
+rdkafka = {version = "0.29.0", features = ["tokio"]}
+rayon = "1.7.0"
+futures = "0.3.28"
+fern = "0.6.1"
+
+
+# rbatis
+rbs = { version = "4.3"}
+rbatis = { version = "4.3"}
+rbdc-mysql={version="4.3"}
